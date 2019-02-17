@@ -1,0 +1,32 @@
+<h2>Serie A Table</h2>
+<div>
+<ul class="nav nav-tabs">
+    <li class="nav-item" *ngFor="let numday of number">
+      <a  [routerLink]="" (click)="changedays(numday)" >{{numday}}</a>
+
+    </li>
+  </ul>
+</div>
+
+  <div class="container">
+      <table class="table table-bordered  table-striped">
+        <thead class="thead-dark" >
+          <tr>
+            <th>Home</th>
+            <th>Away</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of matches">
+              <td><a routerLink="teamDetails/{{item.homeTeam.id}}">{{item.homeTeam.name}}</a></td>
+              <td> <a routerLink="teamDetails/{{item.awayTeam.id}}">{{item.awayTeam.name}}</a></td>
+            <td><a routerLink="matchDetails/{{item.id}} ">{{item.scorehome}} - {{item.scoreaway}}</a></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+
+

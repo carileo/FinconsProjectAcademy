@@ -1,0 +1,35 @@
+<div *ngIf='stat!=undefined' class='t'>
+    <section class='head'>
+
+
+      <h1>{{stat.match.currentMatch}} Giornata </h1>
+    </section><hr class='hr'>
+    <section class='account-info'>
+      <div class='posts'>
+        <h3>{{stat.match.homeTeam.name}}</h3>
+
+        <h4>Win : {{stat.hwin}}</h4>
+        <h4>Pair : {{stat.hpar}}</h4>
+        <h4>Lose : {{stat.hlose}}</h4>
+
+
+      </div>
+      <div class='followers'>
+        <h3>Final</h3>
+        <h4>{{stat.match.scorehome}} : {{stat.match.scoreaway}}</h4>
+        <h3>Partial</h3>
+        <h4> {{stat.match.homepartial}} : {{stat.match.awaypartial}} </h4>
+
+      </div>
+      <div class='following'>
+        <h3>{{stat.match.awayTeam.name}}</h3>
+        <h4>Win : {{stat.awin}}</h4>
+        <h4>Pair : {{stat.apar}}</h4>
+        <h4>Lose : {{stat.alose}}</h4>
+
+      </div>
+
+    </section><hr class='hr'>
+
+    <button type="button" class="btn btn-primary" routerLink="">Go To Match</button>
+      </div>

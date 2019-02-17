@@ -1,0 +1,52 @@
+
+
+
+
+  <div *ngIf="team != undefined"  class='t'>
+      <section class='head'>
+
+        <img src="{{img}}" class='userpic' alt="">
+        <h1> {{team.name}} </h1>
+        <p class='username'>{{team.address}}</p>
+      </section><hr class='hr'>
+      <section class='account-info'>
+        <div class='posts'>
+          <h3>{{team.venue}}</h3>
+          <p>Venue</p>
+        </div>
+        <div class='followers'>
+          <h3>{{team.founded}}</h3>
+          <p>Founded</p>
+
+        </div>
+        <div class='following'>
+          <a href='{{team.website}}'><h3>{{team.website}}</h3></a>
+          <p>website</p>
+        </div>
+
+      </section><hr class='hr'>
+      <section  class='teamSquad'>
+
+        <div   class="team">
+            <h1>Team</h1>
+            <button type="button" class="btn btn-primary" routerLink="">Go To Match</button>
+            <hr class='hr'>
+            <nav *ngFor="let item of squad" >
+                <a  routerLink="playerDetails/{{item.id}}" class="list-group-item"><h3>{{item.name}} </h3>   {{item.position}} </a>
+            </nav>
+
+            </div>
+      </section>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
